@@ -5,29 +5,34 @@ import {
   PlayIcon
 } from '@heroicons/react/24/outline';
 
+// Import thumbnails
+import coffeeDayImg from "../assets/Thumbnail/CoffeeDay.png";
+import crossNDashImg from '../assets/Thumbnail/Cross-N-Dash.png';
+import cutItRightImg from '../assets/Thumbnail/Cut it Right.png';
+import mergeBlock2048Img from '../assets/Thumbnail/Merge Block 2048.png';
+
 function Projects() {
   const [filter, setFilter] = useState('All');
 
   // Games data organized by engine
   const games = {
-    Cocos: [
+    Cocos: [{
+        title: "Coffee Day",
+        thumbnail: coffeeDayImg,
+        link: "https://www.playzhub.com/game/Coffee-Day",
+        engine: "Cocos Creator"
+      },
       {
         title: "Cross-N-Dash",
-        thumbnail: "/src/assets/Thumbnail/Cross-N-Dash.png",
+        thumbnail: crossNDashImg,
         link: "https://www.playzhub.com/game/Cross-N-Dash",
         engine: "Cocos Creator"
       }
     ],
     Phaser: [
       {
-        title: "TapTapShots",
-        thumbnail: "/src/assets/Thumbnail/TapTapShots.png",
-        link: "https://www.playzhub.com/game/Tap-Tap-Shots",
-        engine: "Phaser3"
-      },
-      {
         title: "Cut it Right",
-        thumbnail: "/src/assets/Thumbnail/Cut it Right.png",
+        thumbnail: cutItRightImg,
         link: "https://www.playzhub.com/game/Cut-it-Right",
         engine: "Phaser3"
       }
@@ -35,7 +40,7 @@ function Projects() {
     Construct3: [
       {
         title: "Merge Block 2048",
-        thumbnail: "/src/assets/Thumbnail/Merge Block 2048.png",
+        thumbnail: mergeBlock2048Img,
         link: "https://www.playzhub.com/game/2048",
         engine: "Construct3"
       }
