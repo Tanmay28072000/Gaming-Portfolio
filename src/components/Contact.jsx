@@ -5,8 +5,6 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
-import { portfolioData } from '../data/portfolioData';
-
 function Contact() {
 
   const containerVariants = {
@@ -35,8 +33,8 @@ function Contact() {
   const contactMethods = [
     {
       type: 'Email',
-      value: portfolioData.contact.email,
-      link: `mailto:${portfolioData.contact.email}`,
+      value: 'tanmaymukherjee2807@gmail.com',
+      link: 'mailto:tanmaymukherjee2807@gmail.com',
       icon: <EnvelopeIcon className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500',
       description: 'Send me an email'
@@ -136,7 +134,7 @@ function Contact() {
                 <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm mb-2">
                   {method.description}
                 </p>
-                <p className="text-gray-800 dark:text-gray-200 text-sm sm:text-base font-medium break-words">
+                <p className="text-gray-800 dark:text-gray-200 text-xs sm:text-sm font-medium break-all">
                   {method.value}
                 </p>
               </motion.a>

@@ -6,6 +6,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Import thumbnails
+import matchMartImg from "../assets/Thumbnail/MatchMart.png";
 import coffeeDayImg from "../assets/Thumbnail/CoffeeDay.png";
 import crossNDashImg from '../assets/Thumbnail/Cross-N-Dash.png';
 import cutItRightImg from '../assets/Thumbnail/Cut it Right.png';
@@ -16,16 +17,23 @@ function Projects() {
 
   // Games data organized by engine
   const games = {
-    Cocos: [{
+    Cocos: [
+      {
+        title: "Match Mart",
+        thumbnail: matchMartImg,
+        link: "https://games.playzhub.com/MatchMart/",
+        engine: "Cocos Creator"
+      }, 
+      {
         title: "Coffee Day",
         thumbnail: coffeeDayImg,
-        link: "https://www.playzhub.com/game/Coffee-Day",
+        link: "https://games.playzhub.com/CoffeeDay/",
         engine: "Cocos Creator"
       },
       {
         title: "Cross-N-Dash",
         thumbnail: crossNDashImg,
-        link: "https://www.playzhub.com/game/Cross-N-Dash",
+        link: "https://games.playzhub.com/CrossyRoad/",
         engine: "Cocos Creator"
       }
     ],
@@ -41,7 +49,7 @@ function Projects() {
       {
         title: "Merge Block 2048",
         thumbnail: mergeBlock2048Img,
-        link: "https://www.playzhub.com/game/2048",
+        link: "https://games.playzhub.com/MergeBlock2048/",
         engine: "Construct3"
       }
     ]
@@ -82,12 +90,12 @@ function Projects() {
 
   // Get all games or filter by engine
   const getAllGames = () => {
-    return Object.entries(games).flatMap(([engine, gameList]) => 
+    return Object.entries(games).flatMap(([engine, gameList]) =>
       gameList.map(game => ({ ...game, category: engine }))
     );
   };
 
-  const filteredGames = filter === 'All' 
+  const filteredGames = filter === 'All'
     ? getAllGames()
     : games[filter] || [];
 
@@ -131,11 +139,10 @@ function Projects() {
             <motion.button
               key={tech}
               onClick={() => setFilter(tech)}
-              className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 ${
-                filter === tech
-                  ? 'bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 dark:from-purple-500 dark:via-pink-500 dark:to-orange-500 text-white shadow-lg'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600'
-              }`}
+              className={`px-3 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 ${filter === tech
+                ? 'bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 dark:from-purple-500 dark:via-pink-500 dark:to-orange-500 text-white shadow-lg'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-300 dark:border-gray-600'
+                }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

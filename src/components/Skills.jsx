@@ -8,7 +8,6 @@ import {
   CommandLineIcon,
   GlobeAltIcon
 } from '@heroicons/react/24/outline';
-import { portfolioData } from '../data/portfolioData';
 
 function Skills() {
   const [activeCategory, setActiveCategory] = useState(null);
@@ -182,11 +181,10 @@ function Skills() {
                         {[...Array(5)].map((_, i) => (
                           <div
                             key={i}
-                            className={`w-2 h-2 rounded-full ${
-                              i < Math.floor(skill.level / 20)
+                            className={`w-2 h-2 rounded-full ${i < Math.floor(skill.level / 20)
                                 ? 'bg-gradient-to-r ' + getSkillColor(skill.level)
                                 : 'bg-gray-300 dark:bg-gray-600'
-                            }`}
+                              }`}
                           />
                         ))}
                       </div>
