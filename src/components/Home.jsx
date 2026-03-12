@@ -141,7 +141,7 @@ function Home() {
           className="mt-8 sm:mt-12 lg:mt-16 flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 px-2"
           variants={itemVariants}
         >
-          {['Cocos Creator', 'Phaser3', 'Construct3', 'Unity'].map((tech, index) => (
+          {['Cocos Creator', 'Phaser 3', 'PixiJS', 'Construct3', 'Unity'].map((tech, index) => (
             <motion.span
               key={tech}
               className="px-3 py-1.5 sm:px-4 sm:py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full text-xs sm:text-sm font-medium text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-600"

@@ -62,11 +62,11 @@ function Skills() {
       icon: <WrenchScrewdriverIcon className="w-6 h-6" />,
       color: "from-pink-500 to-orange-500",
       skills: [
-        { name: "Phaser3", level: 95 },
+        { name: "Phaser 3", level: 95 },
+        { name: "PixiJS", level: 90 },
         { name: "Socket.io", level: 90 },
         { name: "Matter.js", level: 80 },
-        { name: "ThreeJS", level: 70 },
-        { name: "Pixi.js", level: 60 },
+        { name: "ThreeJS", level: 70 }
       ]
     },
     "Programming Languages": {
@@ -182,8 +182,8 @@ function Skills() {
                           <div
                             key={i}
                             className={`w-2 h-2 rounded-full ${i < Math.floor(skill.level / 20)
-                                ? 'bg-gradient-to-r ' + getSkillColor(skill.level)
-                                : 'bg-gray-300 dark:bg-gray-600'
+                              ? 'bg-gradient-to-r ' + getSkillColor(skill.level)
+                              : 'bg-gray-300 dark:bg-gray-600'
                               }`}
                           />
                         ))}

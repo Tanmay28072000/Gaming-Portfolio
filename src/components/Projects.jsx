@@ -11,6 +11,8 @@ import coffeeDayImg from "../assets/Thumbnail/CoffeeDay.png";
 import crossNDashImg from '../assets/Thumbnail/Cross-N-Dash.png';
 import cutItRightImg from '../assets/Thumbnail/Cut it Right.png';
 import mergeBlock2048Img from '../assets/Thumbnail/Merge Block 2048.png';
+import hexTakeoverImg from '../assets/Thumbnail/HexTakeover.png';
+
 
 function Projects() {
   const [filter, setFilter] = useState('All');
@@ -23,7 +25,7 @@ function Projects() {
         thumbnail: matchMartImg,
         link: "https://games.playzhub.com/MatchMart/",
         engine: "Cocos Creator"
-      }, 
+      },
       {
         title: "Coffee Day",
         thumbnail: coffeeDayImg,
@@ -37,12 +39,20 @@ function Projects() {
         engine: "Cocos Creator"
       }
     ],
-    Phaser: [
+    "Phaser 3": [
       {
         title: "Cut it Right",
         thumbnail: cutItRightImg,
         link: "https://www.playzhub.com/game/Cut-it-Right",
-        engine: "Phaser3"
+        engine: "Phaser 3"
+      }
+    ],
+    PixiJS: [
+      {
+        title: "HexTakeOver Prototype",
+        thumbnail: hexTakeoverImg,
+        link: "https://dev-games.playzhub.com/HexTakeover/",
+        engine: "PixiJS"
       }
     ],
     Construct3: [
@@ -99,7 +109,7 @@ function Projects() {
     ? getAllGames()
     : games[filter] || [];
 
-  const filters = ['All', 'Cocos', 'Phaser', 'Construct3'];
+  const filters = ['All', 'Cocos', 'Phaser 3', 'PixiJS', 'Construct3'];
 
   return (
     <motion.section
