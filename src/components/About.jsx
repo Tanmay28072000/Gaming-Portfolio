@@ -75,8 +75,8 @@ function About() {
   const timeline = [
     {
       year: "2024-Present",
-      title: "HTML5 Game Developer",
-      description: "Working as a Professional HTML5 Game Developer at Red Apple Technologies"
+      title: "Game Developer",
+      description: "Working as a Professional Game Developer at Red Apple Technologies"
     },
     {
       year: "2023-2024",
@@ -217,7 +217,7 @@ function About() {
                 className={`relative mb-8 sm:mb-12 ${
                   // Mobile: All items aligned left, Desktop: Alternating
                   'md:flex md:items-center ' + (index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse')
-                }`}
+                  }`}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
