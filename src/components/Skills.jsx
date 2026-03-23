@@ -76,7 +76,6 @@ function Skills() {
         { name: "JavaScript", level: 90 },
         { name: "TypeScript", level: 80 },
         { name: "C#", level: 75 },
-        { name: "C++", level: 70 },
         { name: "C", level: 70 }
       ]
     }
