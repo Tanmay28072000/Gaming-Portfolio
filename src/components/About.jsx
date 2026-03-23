@@ -164,6 +164,7 @@ function About() {
               <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 I master game engines like <span className="text-purple-600 dark:text-purple-400 font-semibold">Cocos Creator</span>,
                 <span className="text-pink-600 dark:text-pink-400 font-semibold"> Phaser3</span>,
+                <span className="text-cyan-600 dark:text-cyan-400 font-semibold"> PixiJS</span>,
                 <span className="text-blue-600 dark:text-blue-400 font-semibold"> Construct3</span>, and
                 <span className="text-orange-600 dark:text-orange-400 font-semibold"> Unity</span>,
                 crafting games that captivate and entertain millions of players.
